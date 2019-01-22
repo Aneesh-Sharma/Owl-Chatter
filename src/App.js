@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import firebase from './Firebase.js';
+import Layout from './components/Layout/Layout';
 
 class App extends Component {
+  startIt=()=>{
+    let messages = firebase.database().ref('messages');
+    messages.on('value', function(snapshot) {
+      let talks=snapshot.val();
+      talks.map(talk=>(console.log(talk)));
+    });
+  }
+  
   render() {
+    this.startIt();
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+      <Layout>
+      <p> Hello I am chater</p>
+      <p>lets create some Single page App</p>
+      </Layout>
       </div>
-    );
+      );
   }
 }
 

@@ -1,6 +1,6 @@
 .Toolbar{
 	width: 100%;
-	height: 56px;
+	height: 60px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -8,14 +8,25 @@
 	left: 0;
 	top: 0;
 	padding: 0 20px;
-	background-color: #703B09;
+	background-color: #0084FF;
 	box-sizing: border-box;
 	z-index: 90;
+}
+.Logo{
+	height: 90%;
+}
+.AppName{
+	height: 90%;
+	font-weight: bold;
+	font-size: 30px;
+	font-style: italic;
+	color:white;
 }
 
 .Name{
 	height: 90%;
 	font-weight: bold;
-	font-style: italic;
+	font-size: 22px;
+	color:white;
+	padding-top: 28px;
 }
-

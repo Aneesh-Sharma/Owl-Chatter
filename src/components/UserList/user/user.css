@@ -1,0 +1,18 @@
+.UserBox{
+text-align: center;
+margin:8px 5px;
+border:1px solid #0084FF;
+padding:10px;
+text-transform: capitalize;
+font-weight: bold;
+font-style: italic;
+font-size: 20px;
+color: #0a5091;
+cursor: pointer;
+background-color: #85a0a0;
+}
+
+.Selected{
+	background-color: #0084FF;
+	color: white;
+}

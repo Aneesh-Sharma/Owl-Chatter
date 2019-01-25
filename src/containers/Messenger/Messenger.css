@@ -1,0 +1,35 @@
+.UserList{
+	width: 30%;
+	height: 100%;
+	float: left;
+	background-color: #D3D3D3;
+	
+}
+.MessegeBox{
+	width: 70%;
+	height: 91.5%;
+	float: left;
+	box-sizing: border-box;
+	border-bottom:2px solid #0671d3;
+}
+.TextBox{
+	background-color:#D3D3D3;
+	width: 70%;
+	float: left;
+	height: 57px;
+	box-sizing: border-box;
+	border-bottom:2px solid #0671d3;
+
+}
+
+@media(max-width: 500px){
+	.UserList{
+		display: none;
+	}
+	.TextBox{
+		width: 100%;
+	}
+	.MessegeBox{
+		width: 100%;
+	}
+}

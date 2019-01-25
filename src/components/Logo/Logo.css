@@ -1,0 +1,19 @@
+.Logo{
+	background-color: #ffffff;
+	height: 100%;
+	border-radius: 5px;
+	padding:2px;
+	box-sizing: border-box;
+}
+
+.SingUpLogo{
+	background-color: #0084FF;
+	height: 100%;
+	border-radius: 5px;
+	padding:5px;
+	box-sizing: border-box;
+}
+
+.Logo img{
+	height: 100%;
+}

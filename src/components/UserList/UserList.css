@@ -1,0 +1,12 @@
+.UserList{
+	text-align: center;
+	border:2px solid #0671d3;
+	text-transform: capitalize;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 20px;
+	color: #0084FF;
+	background-color: #D3D3D3;
+	height: 100%;
+	overflow: auto;
+}

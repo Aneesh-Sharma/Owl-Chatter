@@ -1,0 +1,26 @@
+.TextBox{
+	width: 91%;
+	float: left;
+	padding: 0px;
+}
+.Button{
+	width: 9%;
+	float: left;
+	height: 100%;
+	box-sizing: border-box;
+}
+.Button img{
+	height: 60%;
+	width:80%;
+	padding: 8px 0px;
+}
+
+
+@media(min-width: 500px){
+	.TextBox{
+		width: 95%;
+	}
+	.Button{
+		width: 5%;
+	}
+}

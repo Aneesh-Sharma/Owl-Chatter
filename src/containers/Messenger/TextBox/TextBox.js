@@ -13,7 +13,7 @@ class TextBox extends Component {
 				type:'text',
 				placeholder:'Type a message'
 			},
-			value:''
+			value:""
 		}
 	}
 	inputChangeHandler=(event)=>{	
@@ -23,12 +23,14 @@ class TextBox extends Component {
 	}
 	resetTextBox=()=>{
 		let newMessage={...this.state.message};
-		newMessage['value']='';
+		newMessage['value']="";
 		this.setState({message:newMessage});
 	}
 	submitHandler=(event)=>{
 		event.preventDefault();
-		this.props.onMessageSend(this.props.receiver,this.props.userId,this.state.message.value);
+		if(this.props.receiver&&(this.state.message.value).trim()!==""){
+			this.props.onMessageSend(this.props.receiver,this.props.userId,this.state.message.value);
+		}
 		this.resetTextBox();
 	}
 	render(){
@@ -40,31 +42,32 @@ class TextBox extends Component {
 			changed={(event)=>{this.inputChangeHandler(event)}}/>
 			</form>
 			);
-		return(
+		
+			return(
 			<Aux>
 			<div className={classes.TextBox}>
 			{textBox}
 			</div>
 			<div className={classes.Button}>
-			<img src={sendButton} onClick={this.submitHandler}/>
+			<img alt="send logo" src={sendButton} onClick={this.submitHandler}/>
 			</div>
 			</Aux>
 
 			);
+		}
 	}
-}
 
-const mapStatetoProps=state=>{
-	return{
-		userId:state.auth.userId,
+	const mapStatetoProps=state=>{
+		return{
+			userId:state.auth.userId,
+		};
 	};
-};
 
-const mapDispatchtoProps=dispatch=>{
-	return{
-		onMessageSend:(receiver,sender,text)=>dispatch(actions.messageSend(receiver,sender,text)),
+	const mapDispatchtoProps=dispatch=>{
+		return{
+			onMessageSend:(receiver,sender,text)=>dispatch(actions.messageSend(receiver,sender,text)),
+		};
 	};
-};
 
 
-export default connect(mapStatetoProps,mapDispatchtoProps)(TextBox);
+	export default connect(mapStatetoProps,mapDispatchtoProps)(TextBox);

@@ -1,6 +1,12 @@
 import * as actionTypes from './actionTypes.js';
-import axios from 'axios';
 import firebase from '../../Firebase';
+
+export const setReceiver=(id)=>{
+	return{
+		type:actionTypes.SET_RECEIVER,
+		id:id
+	};
+};
 
 export const usersListStart=()=>{
 	return{

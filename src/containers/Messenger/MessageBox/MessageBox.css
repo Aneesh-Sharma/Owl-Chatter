@@ -1,0 +1,25 @@
+.MessageBox{
+
+}
+
+.pc{
+text-align: center;
+color: #0084FF;
+font-size: xx-large;
+font-weight: bold;
+margin-top: 250px;
+}
+
+.mob{
+text-align: center;
+color: #0084FF;
+margin-top: 30px;
+font-size: xx-large;
+font-weight: bold;
+}
+
+@media(min-width: 500px){
+	.mob{
+		display: none;
+	}
+}

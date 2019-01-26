@@ -5,7 +5,7 @@ import classes from './Logo.css';
 const logo = (props)=>{
 return(
 	<div className={props.logo?classes.Logo:classes.SingUpLogo}>
-		<img src={props.logo?logoSrc:singUplogoSrc}/>
+		<img src={props.logo?logoSrc:singUplogoSrc} alt="logo"/>
 	</div>
 	);
 }

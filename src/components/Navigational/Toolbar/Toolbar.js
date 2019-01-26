@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom';
 const toolbar=(props)=>{
 	return (
 		<header className={classes.Toolbar}>
-		<div className={classes.Logo}><Logo logo/></div>
+		<div className={classes.Logo} onClick={props.click}><Logo logo/></div>
 		<div className={classes.AppName}>Chatter</div>
 		{props.auth?<div className={classes.Name}>
 		<NavLink 

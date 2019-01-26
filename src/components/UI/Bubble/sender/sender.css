@@ -1,0 +1,14 @@
+.bubble{
+    background-color: #0084FF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px #B2B2B2;
+    margin: 20px;
+    width:fit-content;
+    padding: 10px;
+    float: right;
+	clear: both;
+	max-width: 35%;
+	font-size: 20px;
+	font-style: italic;
+	color: white;
+}

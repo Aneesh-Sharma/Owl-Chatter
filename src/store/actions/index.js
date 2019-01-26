@@ -6,9 +6,11 @@ export {
 } from './auth.js';
 
 export {
-	usersList
+	usersList,
+	setReceiver
 } from './users.js';
 
 export {
-	messageSend
+	messageSend,
+	messageFetch
 } from './message.js';
